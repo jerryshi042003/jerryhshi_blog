@@ -10,3 +10,10 @@ What I've been reading
 
 What I've been listening to
 - Speakerboxx/The Love Below by Outkast
+
+Favorite Books
+- The World According to Garp by John Irving
+- Open by Andre Agassi
+
+Favorite Albums
+- Straight Outta Compton by NWA
