@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Hobbies
-permalink
-: /hobbies/
+permalink: /hobbies/
 ---
 
 What I've been reading
