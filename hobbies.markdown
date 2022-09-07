@@ -17,3 +17,5 @@ Favorite Books
 
 Favorite Albums
 - Straight Outta Compton by NWA
+
+[music](https://jerryhshi.com/hobbies/music/)
