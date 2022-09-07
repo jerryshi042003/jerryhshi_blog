@@ -3,6 +3,7 @@ layout: page
 title: Hobbies
 permalink: /hobbies/
 ---
+[Click to see how I'm finding new music](https://jerryhshi.com/hobbies/music/)
 
 What I've been reading
 - Breast and Eggs by Mieko Kawakami
@@ -18,4 +19,3 @@ Favorite Books
 Favorite Albums
 - Straight Outta Compton by NWA
 
-[music](https://jerryhshi.com/hobbies/music/)
