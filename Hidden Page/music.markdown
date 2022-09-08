@@ -12,6 +12,7 @@ This song was first sneak peaked in the Chance the Rapper's music video for [A B
 Now the feelin' that I feel is priceless  
 In the spirit, want me to be righteous  
 But I know I might just relapse, get sucked in these devices"
+>
 Again I was initially attracted because of the vices, devices bar. But, as I thought about it while experiencing new things in real time, I began to understand what it meant to feel priceless. It's an undescribable feeling, but there were moments where I caught glimpses of this fleeting emotion. Running across the Brooklyn Bridge, where Joey Badass is from, discovering New York. In Manhattan I even came across five billboards advertising this specific song, it felt serendipitous. Running around Milan through alleys, discovering new places while listening to "Bismallah" by Peter Cat Recording Co for the first time. Traveling to New York alone to watch the US Open. Sitting at the top of Arthur Ashe Stadium watching the sunset over Manhattan while the crowd roars louder than any tennis audience in the world. These are some of the moments I felt the most alive. But at the same time, during these same trips I also dealt with loneliness, family quarrels, and relationship issues. Some of my lowest moments. But this mantra helped me take the highs with the lows and the lows with the highs, realizing that both feelings are fluid and ever-changing. It's a more realistic perspective, but it better prepares me to make the most out of the limited chances of being high and to understand that low doesn't last forever. 
 
 
