@@ -6,16 +6,18 @@ permalink: /hobbies/
 [Click to see how I'm finding new music](https://jerryhshi.com/hobbies/music/)
 
 What I've been reading
-- Breast and Eggs by Mieko Kawakami
-- Days of Grace by Arthur Ashe
+- *Breast and Eggs* by Mieko Kawakami
+- *Days of Grace* by Arthur Ashe
 
 What I've been listening to
-- Speakerboxx/The Love Below by Outkast
+- *Speakerboxx/The Love Below* by Outkast
 
 Favorite Books
-- The World According to Garp by John Irving
-- Open by Andre Agassi
+- *The World According to Garp* by John Irving
+- *Open* by Andre Agassi
 
 Favorite Albums
-- Straight Outta Compton by NWA
+- *Straight Outta Compton* by NWA
+    - *Gangsta Gangsta* and *Express Yourself* are my favorites
+- *Swimming* in *Circles* by Mac Miller
 
