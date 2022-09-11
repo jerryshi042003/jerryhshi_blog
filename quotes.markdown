@@ -45,15 +45,7 @@ Before you know the reason why*"[^15] - Arthur Lee
 
 *"The distance of a desperately moving snail is easily dwarfed of a running dog"*[^19] - Takehiko Inou (REAL)
 
-
-
-
-
-
-
-
-
-
+<hr/>
 
 ## Footnotes
 [^1]:
