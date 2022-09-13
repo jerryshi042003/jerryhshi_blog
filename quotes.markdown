@@ -6,7 +6,7 @@ permalink: /quotes/
 
 These quotes all had a prefound impact on my way of thinking. Below, I share my story with each of these quotes. I hope some of these stick with you.
 
-*"Create for yourself"* - Rick Rubin[^1]  
+<!--*"Create for yourself"* - Rick Rubin[^1]  
   
 *"It's just math, show up every single day"* - Kobe[^2]  
   
@@ -85,6 +85,6 @@ Before you know the reason why*" - Arthur Lee[^15]
 [^18]:
 
 [^19]:
-
+-->
 
 
