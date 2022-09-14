@@ -34,8 +34,8 @@ These quotes all had a prefound impact on my way of thinking. Below, I share my 
 
 *"Pressure is a privelage"* - Peyton Manning[^14]
 
-*"Everybody's gotta live,  
-Before you know the reason why*" - Arthur Lee[^15]
+*"Everybody's gotta live,*   
+*Before you know the reason why"* - Arthur Lee[^15]
 
 *"To become over-familiar with one weapon is as much a fault as not knowing it sufficiently well"* - Miyamoto Musashi[^16]
 
