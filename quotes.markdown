@@ -44,47 +44,29 @@ These quotes all had a prefound impact on my way of thinking. Below, I share my 
 *"You are not special because of who you are but what you do"* - Toni Nadal[^18]
 
 *"The distance of a desperately moving snail is easily dwarfed of a running dog"* - Takehiko Inou (REAL)[^19]
-<!--
+
 <hr/>
 <br/>
 ## Footnotes
-
+<!--
 [^1]:
-
 [^2]:
-
 [^3]:
-
 [^4]:
-
 [^5]:
-
 [^6]:
-
 [^7]:
-
 [^8]:
-
 [^9]:
-
 [^10]:
-
 [^11]:
-
 [^12]:
-
 [^13]:
-
 [^14]:
-
 [^15]:
-
 [^16]:
-
 [^17]:
-
 [^18]:
-
 [^19]:
 -->
 
