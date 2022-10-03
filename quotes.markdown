@@ -45,6 +45,8 @@ These quotes all had a prefound impact on my way of thinking. Below, I share my 
 
 *"The distance of a desperately moving snail is easily dwarfed of a running dog"* - Takehiko Inou (REAL)[^19]
 
+*"The Three C's: Cabeza, Corazón, Cojones"* - Carlos Alcaraz[^20]
+
 <hr/>
 <br/>
 ## Footnotes
