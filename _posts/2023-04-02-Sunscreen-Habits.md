@@ -72,10 +72,10 @@ I am not saying that willpower is not important in accomplishing your goals. I a
 
 Let me explain briefly how habits are formed. According to James Clear, there are four main pillars in each habit:
 
-Cue: What triggers the action
-Crave: The incentive to take action
-Response: How easy the action is
-Reward: The satisfaction you feel after such action
+Cue: What triggers the action  
+Crave: The incentive to take action  
+Response: How easy the action is  
+Reward: The satisfaction you feel after such action  
 <br />
 
 #### **TOOTH BRUSHING & THE LOW-KEY FACTOR**
@@ -116,20 +116,23 @@ If you don’t want to drink water, don’t leave water bottles within an arm’
 
 Let’s take a look at a habit that is not as easy as brushing your teeth. Something that is neutral if not  failing in all the four pillars: putting on sunscreen. 
 
-	Action: Putting on Sunscreen
-Cue: Before going outside and every subsequent 2 hours
-Crave: Avoid sunburns and skin cancer at age 50
-Response: Difficult, hard-to-reach spots on body
-Reward: Slimy hands, oily face, drips into your eyes
+Action: Putting on Sunscreen  
+Cue: Before going outside and every subsequent 2 hours  
+Crave: Avoid sunburns and skin cancer at age 50  
+Response: Difficult, hard-to-reach spots on body  
+Reward: Slimy hands, oily face, drips into your eyes  
 
 It fails in regard to almost every aspect of the pillars. Without the recent surge in promoting dermatology health in advertisement and pediatrician consulting, sunscreen would not be nearly as accepted as it is. However, still upwards of 45% of men and 27% of women never use sunscreen. 
 
 If you are reading this and thinking to yourself, “putting on sunscreen is not that hard”, that’s because you have done it already. You have made something, intrinsically not appealing, into a habit. You don’t put on sunscreen because someone tells you to, you do it because it is a part of who you are. Now as you approach new habits such as diets, getting into painting, and reminding yourself to put your keys back, remember the four pillars and try to plan diligently so you suffer less. New things seem daunting to embrace, but against the odds, you made putting on sunscreen, a slimy, sticky substance that burns your eyes, an unconscious habit and you can do it again.
 
-Arthur Ashe once said that “True Heroism is remarkably sober.” And I believe greatness, similarly, is not the result of a flash of willpower but rather the slow, flowing, mundaneness of sunscreen habits.
+Arthur Ashe once said that   <br />
+“True Heroism is remarkably sober.”   <br />
+And I believe greatness, similarly, is not the result of a flash of willpower but rather the slow, flowing, mundaneness of sunscreen habits.
 
 <br />
 <hr />
+<br />
 #### **WORKS CITED**
 
 Ashe, Arthur R., and Arnold Rampersad. Days of Grace: A Memoir Alfred A. Knopf : Distributed by Random House, 1993.
@@ -138,4 +141,4 @@ Clear, James. Atomic habits: an easy & proven way to build good habits & break b
 
 Holman, Dawn M., et al. “Patterns of sunscreen use on the face and other exposed skin among US adults.” Journal of the American Academy of Dermatology vol. 73,1 (2015): 83-92.e1. doi:10.1016/j.jaad.2015.02.1112
 
-McCormick, Malcom., et al. “Wedding.” Spotify. https://open.spotify.com/track/3fDmodv1uclXZZu27E0jz8?si=b1efbb002cfb4fd3
+McCormick, Malcom., et al. “Wedding.” Spotify. [https://open.spotify.com/track/3fDmodv1uclXZZu27E0jz8?si=b1efbb002cfb4fd3](https://open.spotify.com/track/3fDmodv1uclXZZu27E0jz8?si=b1efbb002cfb4fd3)
