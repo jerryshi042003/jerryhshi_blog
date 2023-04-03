@@ -6,10 +6,10 @@ categories: jekyll update
 permalink: /SunscreenHabits/
 ---
 
-Content Links: Click to skip to [Blog Start](#thinking-vs-feeling)
+Click to skip to [Blog Start](#thinking-vs-feeling)
   <hr/>
   <br />
-#### **PREFACE**
+PREFACE BEGIN.
 
 I was strolling outside my dorm, when I heard a deep whacking sound. It was reminiscent of a woodpecker, if it was the size of a car. Intrigued, I followed the sound down the stairs and under the pedestrian bridge, where I now faced an unpaved dirt hill, blocked by trees. One step at a time, I shifted through the shrubbery where the view cleared up. There, three tennis courts away, was this girl aggressively pounding the ball on a frail, cracked wooden wall. I had never seen a wall being bullied before, but with each penetrating shot, the wooden wall croaked a desperate cry for help. Fear, shock, and awe ran through me. Exactly what a good hitting partner should make you feel. So, I mustered up the courage to ask her to play.
 
