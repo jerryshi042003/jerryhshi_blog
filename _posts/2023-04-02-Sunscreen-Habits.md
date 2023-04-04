@@ -126,11 +126,11 @@ It fails in regard to almost every aspect of the pillars. Without the recent sur
 
 If you are reading this and thinking to yourself, “putting on sunscreen is not that hard”, that’s because you have done it already. You have made something, intrinsically not appealing, into a habit. You don’t put on sunscreen because someone tells you to, you do it because it is a part of who you are. Now as you approach new habits such as diets, getting into painting, and reminding yourself to put your keys back, remember the four pillars and try to plan diligently so you suffer less. New things seem daunting to embrace, but against the odds, you made putting on sunscreen, a slimy, sticky substance that burns your eyes, an unconscious habit and you can do it again.
 
->Arthur Ashe once said that:   <br />
->
->>“True Heroism is remarkably sober.”   <br />
->
->And I believe greatness, similarly, is not the result of a flash of willpower but rather the slow, flowing, mundaneness of sunscreen habits.
+Arthur Ashe once said that:   <br />
+
+>“True Heroism is remarkably sober.”   <br />
+
+And I believe greatness, similarly, is not the result of a flash of willpower but rather the slow, flowing, mundaneness of sunscreen habits.
 
 <br />
 <hr />
