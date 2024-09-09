@@ -48,7 +48,7 @@ The Sauna was my primordial soup, a goldilocks environment for me to rapidly gro
 I know that not everyone is willing and able to tolerate the heat such that the sauna is for you. But your passion, no matter how niche it is, has a community somewhere waiting for you to find it. Mine was in the unsuspecting back corner of the Wooden Gym, past the squash courts, in a dimly lit, surprisingly warm room.
 
 <div style="text-align: center;">
-  <img src="assets/images/sauna-modified.jpg" alt="Sauna Image" style="width:50%;"/>
+  <img src="assets/images/saunaclub-modified.jpg" alt="Sauna Image" style="width:50%;"/>
   <p><em>The original members of the Sauna Club Groupme</em></p>
 </div>
 
