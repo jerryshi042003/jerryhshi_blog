@@ -6,7 +6,7 @@ categories: jekyll update
 permalink: /SunscreenHabits/
 ---
 
-Click to skip to [Blog Start](#thinking-vs-feeling)
+<!-- Click to skip to [Blog Start](#thinking-vs-feeling)
   <hr/>
   <br />
 PREFACE BEGIN.
@@ -52,7 +52,7 @@ PREFACE END.
 
 <br />
   <hr/>
-  <br />
+  <br /> -->
 #### **THINKING VS FEELING**		
 			  
 I recently read a book on habits, and one takeaway is that you should underestimate your willpower. This is not an insult to your mental fortitude but rather a guideline to accomplish your goals with the least amount of willpower necessary. No matter how stubborn you are or how bad you want something, desire is a feeling and feelings are fleeting. While it still is possible to brute force your goals, I implore you to think about how long these results will last and how many times you can replicate this process. Why not increase your margin of error and give yourself more room to breathe?
