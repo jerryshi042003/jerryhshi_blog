@@ -59,7 +59,7 @@ I know that not everyone is willing and able to tolerate the sauna heat. But you
 
 
 <div style="text-align: center;">
-  <img src="my-blog/assets/images/saunaclub-modified.jpg" alt="Sauna Image" style="width:50%;"/>
+  <img src="/assets/images/saunaclub-modified.jpg" alt="Sauna Image" style="width:50%;"/>
   <p><em>The original members of the Sauna Club Groupme</em></p>
 </div>
 
