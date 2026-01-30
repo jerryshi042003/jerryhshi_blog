@@ -1,288 +1,374 @@
 ---
-import Base from '../layouts/Base.astro';
-import Nav from '../components/Nav.astro';
-import Grid from '../components/Grid.astro';
-import ModalOverlay from '../components/Modal/ModalOverlay.astro';
-import WorkModalContent from '../components/Modal/WorkModalContent.astro';
-import SocialModalContent from '../components/Modal/SocialModalContent.astro';
-import { workItems, contentItems } from '../data/modalData';
+/**
+ * V1: Book Cover / Editorial
+ * Miyazaki book cover aesthetic - bold calligraphy hero, orange accent, lots of whitespace
+ */
+import { workRoles, recentPosts, nowStatus, resumePath } from '../data/landingData';
 
-// Resume item (links externally)
-const resumeItem = {
-  type: 'resume',
-  image: '',
-  label: 'Resume',
-  href: '/jerry-shi-resume.pdf',
-  target: '_blank',
-  variant: 'inverted' as const
-};
+const substackUrl = 'https://jerryhshi.substack.com';
+const instagramUrl = 'https://instagram.com/jerrythegoatshi';
 ---
 
-<Base title="SHI">
-  <main>
-    <Nav currentPage="new" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jerry Shi - Sports Tech Professional" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Jerry Shi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Hero: Calligraphy -->
+      <header class="hero">
+        <div class="calligraphy-wrap">
+          <img src="/calligraphy.svg" alt="" aria-hidden="true" class="calligraphy" />
+          <div class="name-overlay">Jerry Shi</div>
+        </div>
+      </header>
 
-    <section class="section">
-      <Grid>
-        <!-- Resume (external link) -->
-        <a href={resumeItem.href} target={resumeItem.target} class="grid-item grid-item--inverted">
-          <div class="grid-item-image">
-            <span class="grid-item-text">Resume</span>
+      <!-- Navigation -->
+      <nav class="nav">
+        <button class="nav-item active" data-panel="work">work</button>
+        <span class="nav-dot">&middot;</span>
+        <button class="nav-item" data-panel="writing">writing</button>
+        <span class="nav-dot">&middot;</span>
+        <button class="nav-item" data-panel="now">now</button>
+      </nav>
+
+      <!-- Content Panels -->
+      <section class="panels">
+        <!-- Work Panel -->
+        <div class="panel active" id="panel-work">
+          <div class="work-current">
+            <span class="work-role">{workRoles[0].role}</span>
+            <span class="work-at">at</span>
+            <span class="work-org">{workRoles[0].org}</span>
+            <span class="work-year">({workRoles[0].year})</span>
           </div>
-        </a>
 
-        <!-- Work items (open work modal) -->
-        {workItems.map((item, index) => (
-          <button class="grid-item" data-modal-type="work" data-index={index}>
-            <div class="grid-item-image">
-              <img src={item.image} alt={item.org} loading="lazy" />
-            </div>
-            <span class="grid-item-label">{item.label}</span>
-          </button>
-        ))}
+          <a href={resumePath} target="_blank" class="resume-btn" rel="noopener noreferrer">Resume</a>
 
-        <!-- Content items (open social modal) -->
-        {contentItems.map((item, index) => (
-          <button class="grid-item" data-modal-type="social" data-index={index}>
-            <div class="grid-item-image">
-              <img src={item.image} alt={item.platform} loading="lazy" />
-            </div>
-            <span class="grid-item-label">{item.platform}</span>
-          </button>
-        ))}
-      </Grid>
-    </section>
+          <ul class="work-history">
+            {workRoles.slice(1).map(role => (
+              <li class="work-item">
+                <span class="work-item-org">{role.org}</span>
+                <span class="work-item-role">{role.role}</span>
+                <span class="work-item-year">{role.year}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-    <!-- Work Modal -->
-    <ModalOverlay id="work-modal" showNav={true}>
-      <WorkModalContent itemCount={workItems.length} />
-    </ModalOverlay>
+        <!-- Writing Panel -->
+        <div class="panel" id="panel-writing">
+          <ul class="posts">
+            {recentPosts.map(post => (
+              <li>
+                <a href={`/blog/${post.slug}`} class="post-link">{post.title}</a>
+              </li>
+            ))}
+          </ul>
+          <a href={substackUrl} class="see-all" target="_blank" rel="noopener noreferrer">Substack &rarr;</a>
+        </div>
 
-    <!-- Social Modal -->
-    <ModalOverlay id="social-modal" showNav={false}>
-      <SocialModalContent />
-    </ModalOverlay>
-  </main>
-</Base>
+        <!-- Now Panel -->
+        <div class="panel" id="panel-now">
+          <p class="now-status">{nowStatus}</p>
+          <a href={instagramUrl} class="now-link" target="_blank" rel="noopener noreferrer">Instagram &rarr;</a>
+        </div>
+      </section>
+    </main>
 
-<script define:vars={{ workItems, contentItems }}>
-  let currentWorkIndex = 0;
+    <script>
+      const navItems = document.querySelectorAll('.nav-item');
+      const panels = document.querySelectorAll('.panel');
 
-  // Work Modal Elements
-  const workModal = document.getElementById('work-modal');
-  const workModalImg = workModal.querySelector('.modal-img');
-  const workModalYears = workModal.querySelector('.modal-years');
-  const workModalRole = workModal.querySelector('.modal-role');
-  const workModalDid = workModal.querySelector('.modal-did');
-  const workModalLearned = workModal.querySelector('.modal-learned');
-  const workModalDots = workModal.querySelectorAll('.dot');
-  const workModalPrev = workModal.querySelector('[data-modal-prev]');
-  const workModalNext = workModal.querySelector('[data-modal-next]');
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const targetPanel = item.dataset.panel;
 
-  // Social Modal Elements
-  const socialModal = document.getElementById('social-modal');
-  const socialModalImg = socialModal.querySelector('.social-img');
-  const socialModalPlatform = socialModal.querySelector('.social-platform');
-  const socialModalHandle = socialModal.querySelector('.social-handle');
-  const socialModalTagline = socialModal.querySelector('.social-tagline');
-  const socialModalCta = socialModal.querySelector('.social-cta');
-  const socialModalCtaText = socialModal.querySelector('.social-cta-text');
+          // Update nav active state
+          navItems.forEach(n => n.classList.remove('active'));
+          item.classList.add('active');
 
-  // Work Modal Functions
-  function showWorkItem(index) {
-    currentWorkIndex = index;
-    const data = workItems[index];
+          // Update panel visibility
+          panels.forEach(p => p.classList.remove('active'));
+          document.getElementById(`panel-${targetPanel}`)?.classList.add('active');
+        });
+      });
+    </script>
 
-    workModalImg.src = data.image;
-    workModalImg.alt = data.org;
-    workModalYears.textContent = data.years;
-    workModalRole.textContent = `${data.role} · ${data.org}`;
-    workModalDid.innerHTML = data.did.map(d => `<li>${d}</li>`).join('');
-    workModalLearned.innerHTML = data.learned.map(l => `<li>${l}</li>`).join('');
-
-    // Update dots
-    workModalDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-
-    // Update nav visibility
-    workModalPrev.style.visibility = index === 0 ? 'hidden' : 'visible';
-    workModalNext.style.visibility = index === workItems.length - 1 ? 'hidden' : 'visible';
-  }
-
-  function openWorkModal(index) {
-    showWorkItem(index);
-    workModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeWorkModal() {
-    workModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Social Modal Functions
-  function showSocialItem(index) {
-    const data = contentItems[index];
-
-    socialModalImg.src = data.image;
-    socialModalImg.alt = data.platform;
-    socialModalPlatform.textContent = data.platform;
-    socialModalHandle.textContent = data.handle;
-    socialModalTagline.textContent = data.tagline;
-    socialModalCta.href = data.externalUrl;
-    socialModalCtaText.textContent = data.ctaText;
-  }
-
-  function openSocialModal(index) {
-    showSocialItem(index);
-    socialModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeSocialModal() {
-    socialModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Event Listeners - Grid Items
-  document.querySelectorAll('.grid-item[data-modal-type]').forEach(item => {
-    item.addEventListener('click', () => {
-      const modalType = item.dataset.modalType;
-      const index = parseInt(item.dataset.index);
-
-      if (modalType === 'work') {
-        openWorkModal(index);
-      } else if (modalType === 'social') {
-        openSocialModal(index);
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-    });
-  });
 
-  // Event Listeners - Work Modal
-  workModal.querySelector('[data-modal-close]').addEventListener('click', closeWorkModal);
-  workModalPrev.addEventListener('click', () => showWorkItem(currentWorkIndex - 1));
-  workModalNext.addEventListener('click', () => showWorkItem(currentWorkIndex + 1));
+      body {
+        font-family: 'IBM Plex Sans', sans-serif;
+        background: #FAF9F6;
+        color: #1a1a1a;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+      }
 
-  workModalDots.forEach((dot, i) => {
-    dot.addEventListener('click', () => showWorkItem(i));
-  });
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
 
-  workModal.addEventListener('click', (e) => {
-    if (e.target === workModal) closeWorkModal();
-  });
+      /* Hero */
+      .hero {
+        margin-bottom: 3rem;
+      }
 
-  // Event Listeners - Social Modal
-  socialModal.querySelector('[data-modal-close]').addEventListener('click', closeSocialModal);
+      .calligraphy-wrap {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-  socialModal.addEventListener('click', (e) => {
-    if (e.target === socialModal) closeSocialModal();
-  });
+      .calligraphy {
+        width: clamp(280px, 50vw, 400px);
+        height: auto;
+        opacity: 0.22;
+      }
 
-  // Keyboard Navigation
-  document.addEventListener('keydown', (e) => {
-    if (workModal.classList.contains('active')) {
-      if (e.key === 'Escape') closeWorkModal();
-      if (e.key === 'ArrowLeft' && currentWorkIndex > 0) showWorkItem(currentWorkIndex - 1);
-      if (e.key === 'ArrowRight' && currentWorkIndex < workItems.length - 1) showWorkItem(currentWorkIndex + 1);
-    }
+      .name-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(1.75rem, 6vw, 4rem);
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #1a1a1a;
+      }
 
-    if (socialModal.classList.contains('active')) {
-      if (e.key === 'Escape') closeSocialModal();
-    }
-  });
-</script>
+      /* Navigation */
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
 
-<style>
-  main {
-    font-family: 'Space Mono', monospace;
-    min-height: 100vh;
-    padding-top: 5rem;
-  }
+      .nav-item {
+        font-family: inherit;
+        font-size: 0.875rem;
+        font-weight: 300;
+        letter-spacing: 0.15em;
+        text-transform: lowercase;
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        padding: 0.25rem 0;
+        transition: color 0.2s ease;
+      }
 
-  .section {
-    padding: 3rem 0;
-  }
+      .nav-item:hover {
+        color: #1a1a1a;
+      }
 
-  /* Grid Items */
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    background: none;
-    border: none;
-    padding: 0;
-    opacity: 0;
-    animation: fadeIn 0.3s ease-in-out forwards;
-  }
+      .nav-item.active {
+        color: #D35400;
+        font-weight: 400;
+      }
 
-  .grid-item:hover {
-    opacity: 0.7;
-  }
+      .nav-dot {
+        color: #999;
+        font-weight: 300;
+      }
 
-  .grid-item-image {
-    aspect-ratio: 1;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
+      /* Panels */
+      .panels {
+        width: 100%;
+        max-width: 500px;
+      }
 
-  .grid-item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+      .panel {
+        display: none;
+        animation: fadeIn 0.3s ease;
+      }
 
-  .grid-item-label {
-    margin-top: 1rem;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #000;
-    text-align: center;
-    line-height: 1.4;
-  }
+      .panel.active {
+        display: block;
+      }
 
-  .grid-item--inverted .grid-item-image {
-    background: #000;
-  }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
 
-  .grid-item-text {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #fff;
-  }
+      /* Work Panel */
+      .work-current {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+      .work-role {
+        font-weight: 600;
+      }
 
-  @media (max-width: 600px) {
-    main {
-      padding-top: 4rem;
-    }
+      .work-at {
+        color: #666;
+        font-weight: 300;
+      }
 
-    .section {
-      padding: 2rem 0;
-    }
+      .work-org {
+        font-weight: 600;
+      }
 
-    .grid-item-label {
-      font-size: 0.65rem;
-      margin-top: 0.75rem;
-    }
+      .work-year {
+        color: #666;
+        font-weight: 300;
+      }
 
-    .grid-item-text {
-      font-size: 0.65rem;
-    }
-  }
-</style>
+      .resume-btn {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 2rem;
+        padding: 0.5rem 1.5rem;
+        border: 1px solid #1a1a1a;
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        transition: all 0.2s ease;
+      }
+
+      .resume-btn:hover {
+        background: #1a1a1a;
+        color: #FAF9F6;
+      }
+
+      .work-history {
+        list-style: none;
+        border-top: 1px solid #e5e5e5;
+        padding-top: 1.5rem;
+      }
+
+      .work-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0.5rem 0;
+        font-size: 0.875rem;
+        color: #666;
+      }
+
+      .work-item-org {
+        font-weight: 400;
+        color: #1a1a1a;
+      }
+
+      .work-item-role {
+        flex: 1;
+        text-align: center;
+        font-weight: 300;
+      }
+
+      .work-item-year {
+        font-weight: 300;
+      }
+
+      /* Writing Panel */
+      .posts {
+        list-style: none;
+        margin-bottom: 1.5rem;
+      }
+
+      .posts li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .post-link {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.2s ease;
+      }
+
+      .post-link:hover {
+        color: #D35400;
+      }
+
+      .see-all {
+        display: block;
+        text-align: center;
+        color: #666;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 300;
+        transition: color 0.2s ease;
+      }
+
+      .see-all:hover {
+        color: #D35400;
+      }
+
+      /* Now Panel */
+      .now-status {
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 1.7;
+        color: #444;
+        margin-bottom: 1rem;
+      }
+
+      .now-link {
+        display: block;
+        text-align: center;
+        font-size: 0.875rem;
+        font-weight: 300;
+        color: #666;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .now-link:hover {
+        color: #D35400;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .container {
+          padding: 3rem 1.5rem;
+        }
+
+        .calligraphy {
+          width: 240px;
+        }
+
+        .work-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.25rem;
+        }
+
+        .work-item-role {
+          text-align: left;
+        }
+      }
+    </style>
+  </body>
+</html>
