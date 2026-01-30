@@ -1,0 +1,288 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Grid from '../components/Grid.astro';
+import ModalOverlay from '../components/Modal/ModalOverlay.astro';
+import WorkModalContent from '../components/Modal/WorkModalContent.astro';
+import SocialModalContent from '../components/Modal/SocialModalContent.astro';
+import { workItems, contentItems } from '../data/modalData';
+
+// Resume item (links externally)
+const resumeItem = {
+  type: 'resume',
+  image: '',
+  label: 'Resume',
+  href: '/jerry-shi-resume.pdf',
+  target: '_blank',
+  variant: 'inverted' as const
+};
+---
+
+<Base title="SHI">
+  <main>
+    <Nav currentPage="new" />
+
+    <section class="section">
+      <Grid>
+        <!-- Resume (external link) -->
+        <a href={resumeItem.href} target={resumeItem.target} class="grid-item grid-item--inverted">
+          <div class="grid-item-image">
+            <span class="grid-item-text">Resume</span>
+          </div>
+        </a>
+
+        <!-- Work items (open work modal) -->
+        {workItems.map((item, index) => (
+          <button class="grid-item" data-modal-type="work" data-index={index}>
+            <div class="grid-item-image">
+              <img src={item.image} alt={item.org} loading="lazy" />
+            </div>
+            <span class="grid-item-label">{item.label}</span>
+          </button>
+        ))}
+
+        <!-- Content items (open social modal) -->
+        {contentItems.map((item, index) => (
+          <button class="grid-item" data-modal-type="social" data-index={index}>
+            <div class="grid-item-image">
+              <img src={item.image} alt={item.platform} loading="lazy" />
+            </div>
+            <span class="grid-item-label">{item.platform}</span>
+          </button>
+        ))}
+      </Grid>
+    </section>
+
+    <!-- Work Modal -->
+    <ModalOverlay id="work-modal" showNav={true}>
+      <WorkModalContent itemCount={workItems.length} />
+    </ModalOverlay>
+
+    <!-- Social Modal -->
+    <ModalOverlay id="social-modal" showNav={false}>
+      <SocialModalContent />
+    </ModalOverlay>
+  </main>
+</Base>
+
+<script define:vars={{ workItems, contentItems }}>
+  let currentWorkIndex = 0;
+
+  // Work Modal Elements
+  const workModal = document.getElementById('work-modal');
+  const workModalImg = workModal.querySelector('.modal-img');
+  const workModalYears = workModal.querySelector('.modal-years');
+  const workModalRole = workModal.querySelector('.modal-role');
+  const workModalDid = workModal.querySelector('.modal-did');
+  const workModalLearned = workModal.querySelector('.modal-learned');
+  const workModalDots = workModal.querySelectorAll('.dot');
+  const workModalPrev = workModal.querySelector('[data-modal-prev]');
+  const workModalNext = workModal.querySelector('[data-modal-next]');
+
+  // Social Modal Elements
+  const socialModal = document.getElementById('social-modal');
+  const socialModalImg = socialModal.querySelector('.social-img');
+  const socialModalPlatform = socialModal.querySelector('.social-platform');
+  const socialModalHandle = socialModal.querySelector('.social-handle');
+  const socialModalTagline = socialModal.querySelector('.social-tagline');
+  const socialModalCta = socialModal.querySelector('.social-cta');
+  const socialModalCtaText = socialModal.querySelector('.social-cta-text');
+
+  // Work Modal Functions
+  function showWorkItem(index) {
+    currentWorkIndex = index;
+    const data = workItems[index];
+
+    workModalImg.src = data.image;
+    workModalImg.alt = data.org;
+    workModalYears.textContent = data.years;
+    workModalRole.textContent = `${data.role} · ${data.org}`;
+    workModalDid.innerHTML = data.did.map(d => `<li>${d}</li>`).join('');
+    workModalLearned.innerHTML = data.learned.map(l => `<li>${l}</li>`).join('');
+
+    // Update dots
+    workModalDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    // Update nav visibility
+    workModalPrev.style.visibility = index === 0 ? 'hidden' : 'visible';
+    workModalNext.style.visibility = index === workItems.length - 1 ? 'hidden' : 'visible';
+  }
+
+  function openWorkModal(index) {
+    showWorkItem(index);
+    workModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeWorkModal() {
+    workModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Social Modal Functions
+  function showSocialItem(index) {
+    const data = contentItems[index];
+
+    socialModalImg.src = data.image;
+    socialModalImg.alt = data.platform;
+    socialModalPlatform.textContent = data.platform;
+    socialModalHandle.textContent = data.handle;
+    socialModalTagline.textContent = data.tagline;
+    socialModalCta.href = data.externalUrl;
+    socialModalCtaText.textContent = data.ctaText;
+  }
+
+  function openSocialModal(index) {
+    showSocialItem(index);
+    socialModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSocialModal() {
+    socialModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Event Listeners - Grid Items
+  document.querySelectorAll('.grid-item[data-modal-type]').forEach(item => {
+    item.addEventListener('click', () => {
+      const modalType = item.dataset.modalType;
+      const index = parseInt(item.dataset.index);
+
+      if (modalType === 'work') {
+        openWorkModal(index);
+      } else if (modalType === 'social') {
+        openSocialModal(index);
+      }
+    });
+  });
+
+  // Event Listeners - Work Modal
+  workModal.querySelector('[data-modal-close]').addEventListener('click', closeWorkModal);
+  workModalPrev.addEventListener('click', () => showWorkItem(currentWorkIndex - 1));
+  workModalNext.addEventListener('click', () => showWorkItem(currentWorkIndex + 1));
+
+  workModalDots.forEach((dot, i) => {
+    dot.addEventListener('click', () => showWorkItem(i));
+  });
+
+  workModal.addEventListener('click', (e) => {
+    if (e.target === workModal) closeWorkModal();
+  });
+
+  // Event Listeners - Social Modal
+  socialModal.querySelector('[data-modal-close]').addEventListener('click', closeSocialModal);
+
+  socialModal.addEventListener('click', (e) => {
+    if (e.target === socialModal) closeSocialModal();
+  });
+
+  // Keyboard Navigation
+  document.addEventListener('keydown', (e) => {
+    if (workModal.classList.contains('active')) {
+      if (e.key === 'Escape') closeWorkModal();
+      if (e.key === 'ArrowLeft' && currentWorkIndex > 0) showWorkItem(currentWorkIndex - 1);
+      if (e.key === 'ArrowRight' && currentWorkIndex < workItems.length - 1) showWorkItem(currentWorkIndex + 1);
+    }
+
+    if (socialModal.classList.contains('active')) {
+      if (e.key === 'Escape') closeSocialModal();
+    }
+  });
+</script>
+
+<style>
+  main {
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+    padding-top: 5rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  /* Grid Items */
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+
+  .grid-item:hover {
+    opacity: 0.7;
+  }
+
+  .grid-item-image {
+    aspect-ratio: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .grid-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .grid-item-label {
+    margin-top: 1rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .grid-item--inverted .grid-item-image {
+    background: #000;
+  }
+
+  .grid-item-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @media (max-width: 600px) {
+    main {
+      padding-top: 4rem;
+    }
+
+    .section {
+      padding: 2rem 0;
+    }
+
+    .grid-item-label {
+      font-size: 0.65rem;
+      margin-top: 0.75rem;
+    }
+
+    .grid-item-text {
+      font-size: 0.65rem;
+    }
+  }
+</style>

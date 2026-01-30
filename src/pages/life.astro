@@ -1,0 +1,139 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Base title="SHI">
+  <main>
+    <Nav currentPage="life" />
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="calligraphy-bg">
+        <img src="/calligraphy.svg" alt="" />
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-intro">the personal site of</p>
+        <h1 class="hero-name">Jerry Shi</h1>
+        <p class="hero-tagline">Data & Sports Analytics</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About</h2>
+        <p>
+          Based in Los Angeles. Working at the intersection of sports, data, and technology.
+        </p>
+        <p>
+          Currently building analytics infrastructure for professional sports organizations.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</Base>
+
+<style>
+  main {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .calligraphy-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    z-index: 0;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  .calligraphy-bg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .hero-intro {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0 0 1rem 0;
+  }
+
+  .hero-name {
+    font-size: clamp(3rem, 15vw, 10rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    margin: 0;
+    color: #000;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #555;
+    margin: 1.5rem 0 0 0;
+  }
+
+  /* ========== ABOUT ========== */
+  .about {
+    padding: 6rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about h2 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0 0 2rem 0;
+  }
+
+  .about p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #333;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .about p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 600px) {
+    .about {
+      padding: 4rem 1.5rem;
+    }
+  }
+</style>

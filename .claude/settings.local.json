@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create astro@latest:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(tree:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(cat:*)",
+      "WebFetch(domain:www.yeezy.com)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:www.instagram.com)"
+    ]
+  }
+}

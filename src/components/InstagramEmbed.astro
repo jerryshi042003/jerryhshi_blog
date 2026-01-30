@@ -1,0 +1,70 @@
+---
+interface Props {
+  url: string;
+  title?: string;
+  date?: string;
+}
+
+const { url, title, date } = Astro.props;
+---
+
+<div class="instagram-embed">
+  {(title || date) && (
+    <div class="embed-header">
+      {title && <h3 class="embed-title">{title}</h3>}
+      {date && <span class="embed-date">{date}</span>}
+    </div>
+  )}
+
+  <div class="embed-container">
+    <blockquote
+      class="instagram-media"
+      data-instgrm-permalink={url}
+      data-instgrm-version="14"
+      style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px);">
+    </blockquote>
+  </div>
+</div>
+
+<script is:inline src="//www.instagram.com/embed.js" async></script>
+
+<style>
+  .instagram-embed {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .embed-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .embed-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    color: #000;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .embed-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .embed-container {
+    width: 100%;
+  }
+
+  /* Override Instagram's default max-width */
+  .embed-container :global(.instagram-media) {
+    margin: 0 auto !important;
+  }
+</style>

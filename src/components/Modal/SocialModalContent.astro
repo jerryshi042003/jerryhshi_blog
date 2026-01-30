@@ -1,0 +1,95 @@
+---
+// Social modal content - populated via JavaScript
+---
+
+<div class="social-modal-view">
+  <div class="social-modal-logo">
+    <img class="social-img" src="" alt="" />
+  </div>
+
+  <div class="social-modal-info">
+    <h2 class="social-platform"></h2>
+    <p class="social-handle"></p>
+
+    <p class="social-tagline"></p>
+
+    <a class="social-cta" href="" target="_blank" rel="noopener noreferrer">
+      <span class="social-cta-text"></span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+  .social-modal-view {
+    padding: 2rem 0;
+  }
+
+  .social-modal-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+  }
+
+  .social-modal-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .social-platform {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 0.25rem;
+  }
+
+  .social-handle {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 1.5rem;
+  }
+
+  .social-tagline {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto 2rem;
+  }
+
+  .social-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #000;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .social-cta:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 600px) {
+    .social-modal-logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .social-platform {
+      font-size: 1.25rem;
+    }
+  }
+</style>
