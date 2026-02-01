@@ -1,52 +1,44 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Nav from '../../components/Nav.astro';
+import Simple from '../../layouts/Simple.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+
+const substackUrl = 'https://jerrythegoat.substack.com';
 ---
 
-<Base title="SHI">
-  <main>
-    <Nav currentPage="blog" />
-
-    <section class="section">
-      <ul class="post-list">
-        {posts.map((post) => (
-          <li class="post-item">
-            <a href={`/blog/${post.slug}`} class="post-link">
-              <span class="post-title">{post.data.title}</span>
-              <span class="post-date">
-                {post.data.date.toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric'
-                })}
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  </main>
-</Base>
+<Simple title="Jerry Shi - Writing" description="Jerry Shi - Writing" active="writing">
+  <section class="writing">
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="post-item">
+          <a href={`/blog/${post.slug}`} class="post-link">
+            <span class="post-title">{post.data.title}</span>
+            <span class="post-date">
+              {post.data.date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+              })}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a href={substackUrl} class="see-all" target="_blank" rel="noopener noreferrer">Substack &rarr;</a>
+  </section>
+</Simple>
 
 <style>
-  main {
-    font-family: 'Space Mono', monospace;
-    min-height: 100vh;
-    padding-top: 5rem;
-  }
-
-  .section {
-    padding: 3rem 0;
+  .writing {
+    width: 100%;
   }
 
   .post-list {
     list-style: none;
-    margin: 0;
+    margin: 0 0 1.5rem;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -64,6 +56,7 @@ const posts = (await getCollection('blog')).sort(
     justify-content: space-between;
     gap: 1.5rem;
     text-decoration: none;
+    color: inherit;
   }
 
   .post-title {
@@ -79,15 +72,21 @@ const posts = (await getCollection('blog')).sort(
     color: #666;
   }
 
+  .see-all {
+    display: block;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 300;
+    transition: color 0.2s ease;
+  }
+
+  .see-all:hover {
+    color: #D35400;
+  }
+
   @media (max-width: 600px) {
-    main {
-      padding-top: 4rem;
-    }
-
-    .section {
-      padding: 2rem 0;
-    }
-
     .post-link {
       flex-direction: column;
       align-items: flex-start;

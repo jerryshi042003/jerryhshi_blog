@@ -1,374 +1,119 @@
 ---
-/**
- * V1: Book Cover / Editorial
- * Miyazaki book cover aesthetic - bold calligraphy hero, orange accent, lots of whitespace
- */
-import { workRoles, recentPosts, nowStatus, resumePath } from '../data/landingData';
-
-const substackUrl = 'https://jerryhshi.substack.com';
-const instagramUrl = 'https://instagram.com/jerrythegoatshi';
+import Simple from '../layouts/Simple.astro';
+import { workRoles, resumePath } from '../data/landingData';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jerry Shi - Sports Tech Professional" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Jerry Shi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <main class="container">
-      <!-- Hero: Calligraphy -->
-      <header class="hero">
-        <div class="calligraphy-wrap">
-          <img src="/calligraphy.svg" alt="" aria-hidden="true" class="calligraphy" />
-          <div class="name-overlay">Jerry Shi</div>
-        </div>
-      </header>
+<Simple title="Jerry Shi" description="Sports Tech Professional" active="work">
+  <section class="work">
+    <div class="work-current">
+      <span class="work-role">{workRoles[0].role}</span>
+      <span class="work-at">at</span>
+      <span class="work-org">{workRoles[0].org}</span>
+      <span class="work-year">({workRoles[0].year})</span>
+    </div>
 
-      <!-- Navigation -->
-      <nav class="nav">
-        <button class="nav-item active" data-panel="work">work</button>
-        <span class="nav-dot">&middot;</span>
-        <button class="nav-item" data-panel="writing">writing</button>
-        <span class="nav-dot">&middot;</span>
-        <button class="nav-item" data-panel="now">now</button>
-      </nav>
+    <a href={resumePath} target="_blank" class="resume-btn" rel="noopener noreferrer">Resume</a>
 
-      <!-- Content Panels -->
-      <section class="panels">
-        <!-- Work Panel -->
-        <div class="panel active" id="panel-work">
-          <div class="work-current">
-            <span class="work-role">{workRoles[0].role}</span>
-            <span class="work-at">at</span>
-            <span class="work-org">{workRoles[0].org}</span>
-            <span class="work-year">({workRoles[0].year})</span>
-          </div>
+    <ul class="work-history">
+      {workRoles.slice(1).map(role => (
+        <li class="work-item">
+          <span class="work-item-org">{role.org}</span>
+          <span class="work-item-role">{role.role}</span>
+          <span class="work-item-year">{role.year}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Simple>
 
-          <a href={resumePath} target="_blank" class="resume-btn" rel="noopener noreferrer">Resume</a>
+<style>
+  .work {
+    width: 100%;
+  }
 
-          <ul class="work-history">
-            {workRoles.slice(1).map(role => (
-              <li class="work-item">
-                <span class="work-item-org">{role.org}</span>
-                <span class="work-item-role">{role.role}</span>
-                <span class="work-item-year">{role.year}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+  .work-current {
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
 
-        <!-- Writing Panel -->
-        <div class="panel" id="panel-writing">
-          <ul class="posts">
-            {recentPosts.map(post => (
-              <li>
-                <a href={`/blog/${post.slug}`} class="post-link">{post.title}</a>
-              </li>
-            ))}
-          </ul>
-          <a href={substackUrl} class="see-all" target="_blank" rel="noopener noreferrer">Substack &rarr;</a>
-        </div>
+  .work-role {
+    font-weight: 600;
+  }
 
-        <!-- Now Panel -->
-        <div class="panel" id="panel-now">
-          <p class="now-status">{nowStatus}</p>
-          <a href={instagramUrl} class="now-link" target="_blank" rel="noopener noreferrer">Instagram &rarr;</a>
-        </div>
-      </section>
-    </main>
+  .work-at {
+    color: #666;
+    font-weight: 300;
+  }
 
-    <script>
-      const navItems = document.querySelectorAll('.nav-item');
-      const panels = document.querySelectorAll('.panel');
+  .work-org {
+    font-weight: 600;
+  }
 
-      navItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const targetPanel = item.dataset.panel;
+  .work-year {
+    color: #666;
+    font-weight: 300;
+  }
 
-          // Update nav active state
-          navItems.forEach(n => n.classList.remove('active'));
-          item.classList.add('active');
+  .resume-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+  }
 
-          // Update panel visibility
-          panels.forEach(p => p.classList.remove('active'));
-          document.getElementById(`panel-${targetPanel}`)?.classList.add('active');
-        });
-      });
-    </script>
+  .resume-btn:hover {
+    background: #1a1a1a;
+    color: #FAF9F6;
+  }
 
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+  .work-history {
+    list-style: none;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
 
-      body {
-        font-family: 'IBM Plex Sans', sans-serif;
-        background: #FAF9F6;
-        color: #1a1a1a;
-        min-height: 100vh;
-        -webkit-font-smoothing: antialiased;
-      }
+  .work-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    padding: 0.1rem 0;
+    font-size: 0.875rem;
+    color: #666;
+  }
 
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-      }
+  .work-item-org {
+    font-weight: 400;
+    color: #1a1a1a;
+  }
 
-      /* Hero */
-      .hero {
-        margin-bottom: 3rem;
-      }
+  .work-item-role {
+    text-align: left;
+    font-weight: 300;
+  }
 
-      .calligraphy-wrap {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
+  .work-item-year {
+    font-weight: 300;
+    color: #777;
+  }
 
-      .calligraphy {
-        width: clamp(280px, 50vw, 400px);
-        height: auto;
-        opacity: 0.22;
-      }
-
-      .name-overlay {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: clamp(1.75rem, 6vw, 4rem);
-        font-weight: 600;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #1a1a1a;
-      }
-
-      /* Navigation */
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 3rem;
-      }
-
-      .nav-item {
-        font-family: inherit;
-        font-size: 0.875rem;
-        font-weight: 300;
-        letter-spacing: 0.15em;
-        text-transform: lowercase;
-        background: none;
-        border: none;
-        color: #666;
-        cursor: pointer;
-        padding: 0.25rem 0;
-        transition: color 0.2s ease;
-      }
-
-      .nav-item:hover {
-        color: #1a1a1a;
-      }
-
-      .nav-item.active {
-        color: #D35400;
-        font-weight: 400;
-      }
-
-      .nav-dot {
-        color: #999;
-        font-weight: 300;
-      }
-
-      /* Panels */
-      .panels {
-        width: 100%;
-        max-width: 500px;
-      }
-
-      .panel {
-        display: none;
-        animation: fadeIn 0.3s ease;
-      }
-
-      .panel.active {
-        display: block;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(8px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      /* Work Panel */
-      .work-current {
-        text-align: center;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-      }
-
-      .work-role {
-        font-weight: 600;
-      }
-
-      .work-at {
-        color: #666;
-        font-weight: 300;
-      }
-
-      .work-org {
-        font-weight: 600;
-      }
-
-      .work-year {
-        color: #666;
-        font-weight: 300;
-      }
-
-      .resume-btn {
-        display: block;
-        width: fit-content;
-        margin: 0 auto 2rem;
-        padding: 0.5rem 1.5rem;
-        border: 1px solid #1a1a1a;
-        color: #1a1a1a;
-        text-decoration: none;
-        font-size: 0.8rem;
-        font-weight: 400;
-        letter-spacing: 0.1em;
-        transition: all 0.2s ease;
-      }
-
-      .resume-btn:hover {
-        background: #1a1a1a;
-        color: #FAF9F6;
-      }
-
-      .work-history {
-        list-style: none;
-        border-top: 1px solid #e5e5e5;
-        padding-top: 1.5rem;
-      }
-
-      .work-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding: 0.5rem 0;
-        font-size: 0.875rem;
-        color: #666;
-      }
-
-      .work-item-org {
-        font-weight: 400;
-        color: #1a1a1a;
-      }
-
-      .work-item-role {
-        flex: 1;
-        text-align: center;
-        font-weight: 300;
-      }
-
-      .work-item-year {
-        font-weight: 300;
-      }
-
-      /* Writing Panel */
-      .posts {
-        list-style: none;
-        margin-bottom: 1.5rem;
-      }
-
-      .posts li {
-        padding: 0.75rem 0;
-        border-bottom: 1px solid #e5e5e5;
-      }
-
-      .post-link {
-        color: #1a1a1a;
-        text-decoration: none;
-        font-weight: 400;
-        transition: color 0.2s ease;
-      }
-
-      .post-link:hover {
-        color: #D35400;
-      }
-
-      .see-all {
-        display: block;
-        text-align: center;
-        color: #666;
-        text-decoration: none;
-        font-size: 0.875rem;
-        font-weight: 300;
-        transition: color 0.2s ease;
-      }
-
-      .see-all:hover {
-        color: #D35400;
-      }
-
-      /* Now Panel */
-      .now-status {
-        text-align: center;
-        font-size: 1.125rem;
-        font-weight: 300;
-        line-height: 1.7;
-        color: #444;
-        margin-bottom: 1rem;
-      }
-
-      .now-link {
-        display: block;
-        text-align: center;
-        font-size: 0.875rem;
-        font-weight: 300;
-        color: #666;
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
-
-      .now-link:hover {
-        color: #D35400;
-      }
-
-      /* Responsive */
-      @media (max-width: 600px) {
-        .container {
-          padding: 3rem 1.5rem;
-        }
-
-        .calligraphy {
-          width: 240px;
-        }
-
-        .work-item {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.25rem;
-        }
-
-        .work-item-role {
-          text-align: left;
-        }
-      }
-    </style>
-  </body>
-</html>
+  @media (max-width: 600px) {
+    .work-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+  }
+</style>

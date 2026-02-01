@@ -24,7 +24,7 @@ export const workRoles: WorkRole[] = [
     year: '2024'
   },
   {
-    org: 'UCLA',
+    org: 'UCLA Athletics',
     role: 'Tennis Analytics Founder',
     year: '2023'
   },
@@ -46,7 +46,7 @@ export const recentPosts: BlogPost[] = [
 ];
 
 // "Now" status - easy to update
-export const nowStatus = "Building real-time analytics infrastructure for the LA Kings";
+export const nowStatus = "Building content while I work for the LA Kings.";
 
 // Resume path
 export const resumePath = '/jerry-shi-resume.pdf';
