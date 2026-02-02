@@ -1,0 +1,193 @@
+---
+title: "Ramadan"
+date: 2022-09-08
+description: "My experience participating in Ramadan as a non-Muslim college student"
+---
+
+Content Links: Click to skip to [tldr](#tldr), [pictures](#pictures), [key takeaways](#post-ramadan-reflections)
+
+Disclaimer: I talk in-depth about Ramadan and Muslim culture throughout this blog. As I am not Muslim, the experiences and opinions expressed are purely my own. I hope to share my thoughts in a thought-provoking and respectful manner.
+
+---
+
+## Intro
+
+In April 2022, I decided to participate in the Muslim tradition of Ramadan. If you are unfamiliar, Ramadan is a month-long practice in which you abstain from both eating and drinking during the day which is around 5am till 8pm. Every year, more than a billion Muslims celebrate it yearly. So what's unique about my Ramadan story?
+
+I am not Muslim. I'm not even religious. I am a Asian-American male in college, who decided to partake in Ramadan without any religious attachments. Now you might have some questions. Why would I do this? Is this cultural appropriation? Was it worth it? All questions that I have asked myself many times and been asked by my peers. However, it is because of my unique perspective that I can share what I have learned about Ramadan as an outsider, who was eager to learn and try something new.
+
+When people ask me why I started Ramadan, I would love to respond that I did it to be more grateful or to educate myself on a rich cultural tradition. But if I am going to be honest, I had no such stoic intentions, at least at the beginning. Gathered at the dining hall with my tennis team, my Muslim friend Suhail jokingly asked if anyone would participate in Ramadan with him during the coming month. And I accepted.
+
+## Beginning of Ramadan
+
+And so just like that, I started Ramadan. Thankfully, UCLA was accommodating with their Ramadan options, allowing for food to be taken out and providing Halal options. The hard part came down to my physical and mental endurance.
+
+## First Day
+
+I woke up early, around 4:30, to grab a few quick bites of a bagel before falling back asleep. Waking up again later, I trekked to and from classes—slowly getting thirstier. The sun harshly beamed on my neck and arms. Sweat trickled out of every pore on my skin. The occasional sea breeze blew my mind into an imaginary world where I was on the Malibu beach, gazing into the infinite horizon. And when it stopped, I was back on the black scorching pavement walking to class: My energy and spirit gone with the wind.
+
+I couldn't sit still in my room. I couldn't focus on studying. So, I did what I had to do to kill time and keep my mind as far away from food as possible. Play tennis. I called up all my friends to come to the courts, rotating between match-ups. The first 2-3 hours went by like that, but I still had some time remaining before dinner.
+
+Even more hungry. Still, desperately dehydrated. My legs started tingling, barely able to hold up my weight. Yet I played through another hour and a half, counting the minutes till sundown.
+
+I checked the clock.
+
+- 8:00 — 28 minutes left. I can make it.
+- 8:18 — 10 minutes left. I'm almost there. Went back to playing.
+- 8:27 — 1 minute left. Time slowed down. I paced around.
+- 8:27 — 30 seconds left. I bit my teeth into my shirt, filled with excitement.
+- 8:27 — 5 seconds left. My energy exploded and I started running with joy.
+- 8:28 — I made it.
+
+My friends accompanied me to a long-awaited dinner in which I devoured halal lamb gyros while gobbling down watermelon to quench my thirst. That night I wrote in my journal that biting into the soft, juicy honeydew melon felt like I had "found a stream of water after aimlessly walking around in the Sahara Desert". I was so relieved to be able to freely eat, I sat there for two hours, filling my stomach beyond full. The problem now was getting myself to stop eating.
+
+## Adapting
+
+After that first day, this pattern continued more or less. I would wake up, do my daily activities, play a little too much tennis, and be exhausted by Iftar. After waiting a whole day of fasting, that last minute before freedom would feel everlasting. Despite being right at the edge of the finishing line, it was so much more painful to resist my temptations. I felt like a prisoner banging on his cell bars, begging to be freed.
+
+There's an example in *Atomic Habits* by James Clear that helps illustrate my perspective. Picture an ice cube. It's at 25 degrees fahrenheit. You move the temperature up 1 to 26. Then again to 27, 28, 29, and 30. You've already 5 degrees higher, but there is no proof that the ice is melting, no proof of progress. Once again, to 31 degrees. There's still no change. It's at this point that you reach an ultimatum. You can either give into the doubt that your actions were for naught, that your efforts have been wasted. OR you can choose to believe in yourself, finding pride in your effort no matter how far away you are from the goal. And with just one more degree, the ice cube melts.
+
+I was the one who got to 31 degrees and gave up. Instead of recognizing there was only one minute left, I panicked and kept asking myself "When will it be over?" Obviously it is harder to think clearly when your mind and body are in abnormal conditions, yet I still lacked patience.
+
+But then I started trusting myself, recognizing my effort. And that slight change in perspective was the one degree that started melting away my fears. That last minute of torture now became the most satisfying one. That last minute was proof that I had endured the hardship of fasting throughout the whole day. Looking back at how hard I struggled gave me a surge of confidence, almost making me want to continue fasting some days.
+
+This adaptation was monumental in motivating me to finish the month. I was originally planning to do Ramadan for two weeks, but this slightly altered outlook on one minute of the day gave me confidence that I had the ability to adapt and overcome. I made the most difficult part of each day my victory lap. And now, I could visualize my progress even before I reached my goal, like a hiker looking back in amazement at the starting point that is now barely recognizable in the distance.
+
+Other changes also occurred in my diet. Simple fruits and vegetables started popping with vibrant flavors and textures. My normal diet of greasy, sugary foods now seemed overwhelming. And thus, I continued on with Ramadan embracing the difficulty of fasting and a healthier diet.
+
+As the month carried on, my ability to not think about food improved. However, my thirst never really went away. I would even take cold showers in an attempt to quell my thirst. But it was usually to no avail. I'm sure the negative effects of fasting are imaginable. Picture low energy, hangry, and water being the only thing on your mind. It sapped me of my energy but also patience even when I did not realize it.
+
+## Davis
+
+Toward the end of Ramadan, I went to Davis for a club tennis tournament. With long car rides in a stuffy van and 100 degree sun baking me on the courts, it was tough to keep fasting. The constant traveling also made it hard for me to find places to eat either early in the morning or late at night. Thus, sometimes my meals for the day would consist of peanut butter and white bread found in passing gas stations. During the day, I would be forced to accompany many of my teammates to multiple lunches and dinners, watching them drink and eat to their heart's content. It was sometimes too unbearable that I had to take walks and naps to take my mind off food.
+
+During a match, I was so tired that I got into an argument with the opposing team over them taking a break mid-point. I had to take a step back, apologize, and acknowledge to myself that my anger was not directed at them but rather my thirst. It was kind of like that Snickers commercial: "You're not you when you're hungry". That is most definitely a true statement.
+
+I bring this up not to dramatize my experience but rather illustrate the amount of sacrifice that Ramadan entails. Nonetheless, Ramadan is a shared hardship. No matter if you see or talk to other people doing Ramadan, you know that there are more than a billion people sharing that sacrifice with you. Despite whether or not my teammates or opponents knew what I was going through, I just had to get through fasting day by day. Similarly, people go through their own unique hardships day by day, even if the people around them never know.
+
+Having said that, it is also true that even if you don't see the people going through the same hardship as you, you know that there are people out there enduring the same challenges, fighting day by day. That instilled in me comfort and perseverance, recognizing that I am not alone in whatever challenge I face.
+
+At Davis, I was given the opportunity to become more independent. As I stated earlier, not eating meals with the team gave me a lot of freedom to do as I wish. I walked around the campus freely, discovering the local farmers' market and intriguing cow monuments. I started paying more attention to my environment.
+
+Running through Davis, the breeze sliced through the hot, still air and passed through my chest. The leaves rustled above me as I closed my eyes to take a nap. Sprawled on the grassy campus quad, I looked up to see a flock of birds pass through the sky. The same roads and parks I walked through with my friends felt different now that I was alone. More serene. I began to understand the difference between seclusion and solitude.
+
+That being said, once I returned back to my team, my teammates did try their best to accommodate me. Despite them not knowing exactly my struggles they supported me nonetheless and would even wait to eat late dinners just so I could join. The usual tense environments of tournaments completely vanished as we ate our dinners in high spirits with laughter. Our Davis team was more than just a tennis team. We were friends who cared and supported each other both on and off the court. I was so proud to be on that team.
+
+## Explaining Ramadan
+
+There were many times that I needed to explain myself for doing Ramadan. It'd usually start off like:
+
+> "Can you get lunch?"
+> "Nah"
+> "Why not?"
+> "I'm doing Ramadan"
+> "Ok, cool… wait what?"
+> "Yeah"
+> "Umm… can I ask why?"
+
+Towards the beginning, I was very eager to answer "I'm doing Ramadan". When you first tell that to someone there is a look of confusion then a little bit of awe. It made me feel special, for a moment. But, I quickly realized that such behavior was contradictory to the selfless nature of Ramadan.
+
+If you did not know, besides the fasting, Ramadan heavily focuses on introspection, charity, and family. At the beginning, I definitely got carried away in that excitement that was fasting day by day: making a point of it to my peers. It was either my thirst, hunger, or sore legs—there was always something to complain about. I took a long look in the mirror and I saw an embarrassing sight of someone using pity to get the attention of others. Especially since I understood Ramadan's focus on humility, I felt deeply embarrassed by my actions. After realizing this, I tried my best through the rest of the month to complain as little as possible no matter how thirsty or tired I was. And by silently enduring it day by day, I was able to feel humbled and proud of my behavior.
+
+## Breathing Exercise
+
+However, that did not make fasting any easier. There was one day that I had forgotten to drink water in the morning. My throat, mouth, and lips were dried up with many hours left in the day. I lacked focus to study anything. Showering only temporarily soothed my mind. And even napping could only kill a few hours. I lay there on my bed daydreaming about water gushing down my mouth, desperate to make time go by.
+
+But at that moment, I was reminded of the Buddhist ideology that desire only brings unhappiness and accepting is how you can move forward. I've encountered this principle many times in my life. A real-life example is when I read in Nadal's autobiography how he views a match as accepting and enduring. No matter what is thrown at him—soreness, rain, foot injuries—Nadal will fight and play through it all. I was inspired to do the same.
+
+So instead of thinking about what I so obviously wished for, water, I thought about what I had in my life that other people might be wishing for in the same way I wanted water. At that moment, as I heaved long, slow dry breaths, I thought about my lungs. Young healthy lungs that supported my body with each unconscious breath. In that moment for the next couple of minutes I focused on each conscious breath and was filled with a sense of appreciation with each inhale and exhale. This intense yet peaceful feeling was something I had always heard about but never truly understood: gratitude.
+
+## Post-Ramadan Reflections
+
+Getting tired and thirsty were all things that I expected—but maybe not that degree of intensity. However, as I now look back and reflect on my whole experience in Ramadan, I see a couple of ways it affected me that I was not expecting.
+
+### Losing Patience
+
+Initially my thirst and hunger were obvious and I knew when my body was not performing as it should be. But as the month continued, I started adapting to the conditions to the point where the pain wasn't obvious, in fact it was barely noticeable. However, I was still affected, especially losing a lot of patience.
+
+I felt like I was brimming with energy, but in reality my physical conditions exhausted my mental capacity far beyond what I recognized: affecting my personality and focus. I would have trouble maintaining conversations while wanting to socialize less. This confused me and I questioned why I could not enjoy the same things.
+
+On the tennis court, I could not maintain my focus, missing much more than normal and easily getting into arguments. One day I was trying my hardest to focus, playing one ball at a time, when my friend called a ball I thought was in: out. My energy had been building up through that point and when I heard the out, confusion rushed up my throat and vomited out in anger. My opponent's partner glanced at me in a way that asked "What is wrong with you?" My impatience and inability to control my emotions made me feel disgusted at myself. And this only stacked upon the existing frustration, creating a negative feedback loop.
+
+It was only until I recognized that I was overwhelmed, despite not feeling low in energy, that I was able to resolve my problems. I started playing one or two games less than normal, giving my mind and body both time to rest. If I didn't want to socialize I would apologize and explain that I needed time for myself. Even occasional blow-ups could be better resolved by taking a deep breath, acknowledging a slight lapse in judgment, and apologizing quickly.
+
+What I came to realize is that frustration and exhaustion builds up even when you don't feel it coming. After experiencing this first-hand, I try to extrapolate my feelings to better understand other peoples' situations. I've come to understand that hardships can make you act differently than you normally would or want to. And with this realization, I wish to treat others with more patience and compassion especially if I don't know the burdens they carry.
+
+### Stress Limit
+
+To be transparent, besides Ramadan, April was a stressful month. My personal insecurities grew larger than I could handle and Ramadan's physical and mental toll only exacerbated the situation. And during that month, I had two of my first panic attacks.
+
+Similarly to my mental depletion of patience, my stress levels had unconsciously risen to unmanageable levels. My thoughts spiraled into doubts and fears. I feared that my effort trying to improve at tennis had gone to waste. I feared that my lack of experience and undecided career goals were signs of future failure. I feared that I would lose the personal relationships of people I cared most about. And through it all, I was frustrated and ashamed that I was giving into my fears.
+
+On my birthday, in the middle of April, the same thing happened. I was in front of my friends, supposedly having a fun time, and I felt like walls were closing in on me. I didn't want to be there, and that hurt me. My friends had all gathered here for me and I couldn't even feel grateful. I wondered what was wrong with me? My breathing sped up unnaturally. I started to hyperventilate. I buried my face into my hands, trying to take slow deep breaths. I felt a desperate need to escape.
+
+However, when I looked up I saw a different view than what I was expecting. My friends had silently surrounded me and were reassuring me. Without having to ask what happened, they instinctively showed me kindness and patiently waited.
+
+One of my friends, usually the funniest one in the group, told me to grip her hand as hard as possible and yell at the top of my lungs that I love myself and everything would be ok. She wouldn't take no for an answer, so I reluctantly followed her instructions and whether I believed myself or not, I felt a bit of relief and even slowly smiled. It was silly and stupid but it worked.
+
+My goal with this anecdote is not to draw sympathy but rather showcase that Ramadan can compound upon any pre-existing stress. Yet having friends and family along the way to support you, reminds you that you are loved and appreciated: making it that much easier.
+
+Ramadan has helped me acknowledge my stress limitations so that moving forward I can give myself room to breathe, especially in new stressful situations. Now if I find myself needing help, I know that I have people who will be there for me. That fact in itself is something I am so grateful for.
+
+*Quick Comment: On my birthday because of my unstable condition, I took that day off Ramadan to rest. I completed an extra day at the end of the month to make up for it.*
+
+### Reactions
+
+Most people heard my explanation for doing Ramadan and supported me fully. But a couple of friends could not see my perspective at all. In fact they almost seemed more confused after my explanation. One of my friends saw no point in "hurting yourself" and suggested that I stop immediately. Another friend silently winced while I was explaining my motivation and it was clear that she was troubled by my actions. These reactions hurt me deeply and crushed my resolve. Although I still felt purposeful in my actions, I detested the thought that in the eyes of my friends I was doing something wrong: I felt guilty.
+
+It took me a while, but I slowly came to understand that regardless of how they showed it, all of my friends were first and foremost concerned about my health. I had confused some of their caring worries as invalidating my actions. It was similar to how Ladybird felt about her mom. Now knowing that, I had no issue patiently taking time to explain my motivations, hear any of their concerns, and share the positive experiences and things I had learned.
+
+That being said, I do understand how it may sound weird for me, a foreigner to Muslim culture, to participate in Ramadan. I hope that my friends can understand my perspective in wanting to learn and especially its emphasis on reflection and self-restraint—two qualities that I wish to improve on. But regardless of what they think, I came to acknowledge the growth in myself, and I am proud of the journey and sacrifice I endured.
+
+One conversation I distinctly remember is with a friend who had one Muslim and one Catholic parent. Growing up, he was acquainted with Ramadan and after listening to my reasoning, he greatly supported my endeavors. Similarly, in college he had his fair share of exploration, experimenting with Buddhism and learning about its ideology regardless of its religious attachments. Through this process, he was able to find some of his own core values and incorporate such practices as becoming vegetarian into his lifestyle. What he emphasized, however, was that it was not the actual act of trying to become vegetarian that allowed him to grow, but rather the open-mindedness to explore new ways of thinking and foreign cultures. I was so glad to speak with someone who finally understood my point of view and it inspired me to finish the month strong.
+
+## Ending Notes
+
+What should you take away from this? I am by no means advocating for you to do Ramadan if you have no intention of doing so. As you can see from my experience, it is definitely not a walk-in-the-park and requires dedication, deliberation, and sacrifice. But that being said, I hope you take opportunities to try something new: knowing that with time and experiences, whatever answer you seek will come to unveil itself.
+
+There is a saying that I am quite fond of.
+
+> "Pressure doesn't build character, it reveals it."
+
+And with this truth, I believe that the fearlessness and curiosity to undergo such pressure is essential to discovering who you are.
+
+## Acknowledgements
+
+I wanted to thank all my friends and family who supported me. In particular, I had two friends that were always checking in on me and patiently listening to all of my sources of distress. They made sure I knew that my wellbeing came first and that they would assist me in whatever way possible. On a whim they would come run the stairs at LATC with me or jump in the sunken fountain to get bruintized. So thank you Suhail and Solia. Additionally, I wanted to thank Maalik and Emily for being inspirations of two stories and also pillars of support. And lastly, thank you Riley for encouraging me to start a blog of my own.
+
+---
+
+## tldr
+
+If I had to sum my experience down to three things it would be:
+
+- Engaging in new experiences helped me better understand myself
+- Open-mindedness to foreign cultures allows you to see new perspectives
+- Never be afraid to ask for help and show love to those that respond
+
+BONUS: "You ain't you when you're hungry."
+
+---
+
+## Pictures
+
+![Nap at Davis](https://user-images.githubusercontent.com/79689407/188257479-2dbc0865-423e-4c29-91f9-a930f9ad5d00.JPG)
+*Nap at Davis*
+
+![Bagels at 3am](https://user-images.githubusercontent.com/79689407/188295397-a64be769-858b-429b-bfd8-ad5d82302c83.jpg)
+*Bagels at 3am*
+
+![Solia's Bagel Toaster](https://user-images.githubusercontent.com/79689407/188295445-e9313f88-2f91-4ec6-934e-30b8edb3a51c.jpg)
+*Solia's Bagel Toaster*
+
+![Bruintized](https://user-images.githubusercontent.com/79689407/188295477-1bf9b88c-3a26-4d84-8cfa-da82e74a2584.jpg)
+*Bruintized*
+
+![Cake](https://user-images.githubusercontent.com/79689407/188295736-70476f41-85b7-4697-8907-f76b243c2c2d.jpg)
+*Cake*
+
+![Iftar at Epicuria](https://user-images.githubusercontent.com/79689407/188295523-487e76f8-adb8-4da1-933a-eb2811a5c282.jpg)
+*Iftar at Epicuria*
+
+![Davis Team](https://user-images.githubusercontent.com/79689407/188295126-6848f2b9-9c10-4f01-867f-08da61151f7e.JPEG)
+*Davis Team*

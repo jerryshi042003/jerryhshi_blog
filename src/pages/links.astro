@@ -1,0 +1,114 @@
+---
+import Base from '../layouts/Base.astro';
+
+const links = [
+  { name: 'YouTube', url: 'https://youtube.com/@jerrythegoatshi', color: '#FF0000' },
+  { name: 'Instagram', url: 'https://instagram.com/jerrythegoatshi', color: '#E4405F' },
+  { name: 'X (Twitter)', url: 'https://x.com/jerrythegoatshi', color: '#000000' },
+  { name: 'TikTok', url: 'https://tiktok.com/@jerrythegoatshi', color: '#000000' },
+  { name: 'Substack', url: 'https://jerryhshi.substack.com', color: '#FF6719' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/jerryhshi', color: '#0A66C2' },
+];
+---
+
+<Base title="SHI">
+  <main class="links-page">
+    <div class="content">
+      <a href="/" class="avatar">JS</a>
+      <h1>Jerry Shi</h1>
+      <p>Sports Tech & Creator</p>
+
+      <ul class="links">
+        {links.map((link) => (
+          <li>
+            <a href={link.url} target="_blank" rel="noopener noreferrer" class="link-btn">
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <a href="/" class="back-link">&larr; Back to site</a>
+    </div>
+  </main>
+</Base>
+
+<style>
+  .links-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+    background: linear-gradient(135deg, var(--orange-50) 0%, var(--white) 100%);
+  }
+
+  .content {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-bottom: var(--space-md);
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .avatar:hover {
+    background: var(--orange-500);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  p {
+    color: var(--gray-600);
+    margin-bottom: var(--space-xl);
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+  }
+
+  .link-btn {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--black);
+    transition: all 0.2s ease;
+  }
+
+  .link-btn:hover {
+    background: var(--black);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+
+  .back-link {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+  }
+
+  .back-link:hover {
+    color: var(--orange-500);
+  }
+</style>

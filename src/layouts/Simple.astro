@@ -1,0 +1,175 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  active?: 'work' | 'writing' | 'now';
+}
+
+const {
+  title = 'Jerry Shi',
+  description = 'Sports Tech Professional',
+  active = 'work'
+} = Astro.props;
+
+const navItems = [
+  { label: 'work', href: '/', key: 'work' },
+  { label: 'writing', href: '/blog', key: 'writing' },
+  { label: 'now', href: '/now', key: 'now' }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <div class="calligraphy-wrap">
+          <img src="/calligraphy.svg" alt="" aria-hidden="true" class="calligraphy" />
+          <div class="name-overlay">Jerry Shi</div>
+        </div>
+      </header>
+
+      <nav class="nav">
+        {navItems.map((item, index) => (
+          <>
+            <a href={item.href} class:list={['nav-item', { active: active === item.key }]}>{item.label}</a>
+            {index < navItems.length - 1 && <span class="nav-dot">&middot;</span>}
+          </>
+        ))}
+      </nav>
+
+      <section class="page-content">
+        <slot />
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  html,
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #FAF9F6;
+    color: #1a1a1a;
+    min-height: 100vh;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 3.25rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .calligraphy-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(90%, 1400px);
+  }
+
+  .calligraphy {
+    width: 100%;
+    height: auto;
+    opacity: 0.275;
+  }
+
+  .name-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1.75rem, 6vw, 4rem);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-item {
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    color: #666;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+  }
+
+  .nav-item:visited {
+    color: #666;
+  }
+
+  .nav-item:hover {
+    color: #1a1a1a;
+  }
+
+  .nav-item.active {
+    color: #D35400;
+    font-weight: 400;
+  }
+
+  .nav-dot {
+    color: #999;
+    font-weight: 300;
+  }
+
+  .page-content {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 3rem 1.5rem;
+    }
+
+    .calligraphy-wrap {
+      width: min(100%, 520px);
+    }
+  }
+</style>

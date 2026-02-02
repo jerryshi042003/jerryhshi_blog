@@ -1,0 +1,96 @@
+---
+import Simple from '../../layouts/Simple.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const substackUrl = 'https://jerrythegoat.substack.com';
+---
+
+<Simple title="Jerry Shi - Writing" description="Jerry Shi - Writing" active="writing">
+  <section class="writing">
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="post-item">
+          <a href={`/blog/${post.slug}`} class="post-link">
+            <span class="post-title">{post.data.title}</span>
+            <span class="post-date">
+              {post.data.date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+              })}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a href={substackUrl} class="see-all" target="_blank" rel="noopener noreferrer">Substack &rarr;</a>
+  </section>
+</Simple>
+
+<style>
+  .writing {
+    width: 100%;
+  }
+
+  .post-list {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .post-item {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 1rem;
+  }
+
+  .post-link {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .post-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .post-date {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  .see-all {
+    display: block;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 300;
+    transition: color 0.2s ease;
+  }
+
+  .see-all:hover {
+    color: #D35400;
+  }
+
+  @media (max-width: 600px) {
+    .post-link {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>

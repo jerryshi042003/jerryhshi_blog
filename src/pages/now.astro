@@ -1,0 +1,41 @@
+---
+import Simple from '../layouts/Simple.astro';
+import { nowStatus } from '../data/landingData';
+
+const instagramUrl = 'https://instagram.com/jerrythegoatshi';
+---
+
+<Simple title="Jerry Shi - Now" description="Jerry Shi - Now" active="now">
+  <section class="now">
+    <p class="now-status">{nowStatus}</p>
+    <a href={instagramUrl} class="now-link" target="_blank" rel="noopener noreferrer">Instagram &rarr;</a>
+  </section>
+</Simple>
+
+<style>
+  .now {
+    width: 100%;
+    text-align: center;
+  }
+
+  .now-status {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+
+  .now-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .now-link:hover {
+    color: #D35400;
+  }
+</style>

@@ -1,0 +1,159 @@
+---
+import Simple from '../../layouts/Simple.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Simple title={`Jerry Shi - ${post.data.title}`} description={post.data.description} active="writing">
+  <article class="article">
+    <header class="post-header">
+      <time datetime={post.data.date.toISOString()}>
+        {post.data.date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+      </time>
+      <h1>{post.data.title}</h1>
+    </header>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <a href="/blog">&larr; Back to all posts</a>
+    </footer>
+  </article>
+</Simple>
+
+<style>
+  .article {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .post-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .post-header time {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 0.75rem;
+  }
+
+  .post-header h1 {
+    font-size: clamp(1.5rem, 4.5vw, 2.75rem);
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .post-content :global(h2) {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .post-content :global(h3) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: #000;
+  }
+
+  .post-content :global(p) {
+    margin-bottom: 1rem;
+  }
+
+  .post-content :global(blockquote) {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid #000;
+    font-style: italic;
+    color: #666;
+  }
+
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 0.5rem;
+    list-style: disc;
+  }
+
+  .post-content :global(ol li) {
+    list-style: decimal;
+  }
+
+  .post-content :global(img) {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+    height: auto;
+    width: min(100%, 640px);
+  }
+
+  .post-content :global(picture),
+  .post-content :global(figure) {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+  }
+
+  .post-content :global(em) {
+    color: #666;
+  }
+
+  .post-content :global(hr) {
+    margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .post-footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 2rem;
+  }
+
+  .post-footer a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .post-footer a:hover {
+    opacity: 0.7;
+  }
+</style>

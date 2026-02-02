@@ -1,0 +1,119 @@
+---
+import Simple from '../layouts/Simple.astro';
+import { workRoles, resumePath } from '../data/landingData';
+---
+
+<Simple title="Jerry Shi" description="Sports Tech Professional" active="work">
+  <section class="work">
+    <div class="work-current">
+      <span class="work-role">{workRoles[0].role}</span>
+      <span class="work-at">at</span>
+      <span class="work-org">{workRoles[0].org}</span>
+      <span class="work-year">({workRoles[0].year})</span>
+    </div>
+
+    <a href={resumePath} target="_blank" class="resume-btn" rel="noopener noreferrer">Resume</a>
+
+    <ul class="work-history">
+      {workRoles.slice(1).map(role => (
+        <li class="work-item">
+          <span class="work-item-org">{role.org}</span>
+          <span class="work-item-role">{role.role}</span>
+          <span class="work-item-year">{role.year}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Simple>
+
+<style>
+  .work {
+    width: 100%;
+  }
+
+  .work-current {
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .work-role {
+    font-weight: 600;
+  }
+
+  .work-at {
+    color: #666;
+    font-weight: 300;
+  }
+
+  .work-org {
+    font-weight: 600;
+  }
+
+  .work-year {
+    color: #666;
+    font-weight: 300;
+  }
+
+  .resume-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+  }
+
+  .resume-btn:hover {
+    background: #1a1a1a;
+    color: #FAF9F6;
+  }
+
+  .work-history {
+    list-style: none;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .work-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    padding: 0.1rem 0;
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  .work-item-org {
+    font-weight: 400;
+    color: #1a1a1a;
+  }
+
+  .work-item-role {
+    text-align: left;
+    font-weight: 300;
+  }
+
+  .work-item-year {
+    font-weight: 300;
+    color: #777;
+  }
+
+  @media (max-width: 600px) {
+    .work-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+  }
+</style>
