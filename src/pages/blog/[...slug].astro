@@ -25,6 +25,13 @@ const { Content } = await post.render();
         })}
       </time>
       <h1>{post.data.title}</h1>
+      {(post.data.scene || post.data.people.length > 0) && (
+        <p class="post-meta">
+          {post.data.scene}
+          {post.data.scene && post.data.people.length > 0 && ' · '}
+          {post.data.people.length > 0 && `with ${post.data.people.join(', ')}`}
+        </p>
+      )}
     </header>
 
     <div class="post-content">
